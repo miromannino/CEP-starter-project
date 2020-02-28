@@ -1,0 +1,8 @@
+<ExtensionList>
+    <Extension Id="com.example.panel">
+        <HostList>
+            <Host Name="PHXS" Port="5042"/>
+            <Host Name="PHSP" Port="5042"/>
+        </HostList>
+    </Extension>
+</ExtensionList>
