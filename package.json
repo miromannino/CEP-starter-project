@@ -9,8 +9,8 @@
   "debugPort": 5042,
   "private": true,
   "scripts": {
-    "build": "node ./build-scripts/build.js",
-    "install": "node ./build-scripts/install.js"
+    "build-extension": "node ./build-scripts/build.js",
+    "install-extension": "node ./build-scripts/install.js"
   },
   "dependencies": {},
   "devDependencies": {
