@@ -4,7 +4,17 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <input type="number" name="opacity" value="50" />
+        <input type="button" name="set-opacity" value="Set Opacity" 
+               onclick="javascript:setSelectedLayerOpacity(24)"/>
+    </div>
+
+    <!-- Only for development purposes -->
+    <div>
+        <a id="#restartExtensionButton">Restart Extension</a>
+    </div>
+
     <script src="./index.js"></script>
 </body>
 </html>

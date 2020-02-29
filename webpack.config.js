@@ -4,6 +4,8 @@ module.exports = {
   entry: path.join(__dirname, "src/js/index.js"),
   output: {
     path: path.join(__dirname, "dist/client"),
+    library: 'extension',
+    libraryTarget: 'var',
     filename: "index.js"
   },
   module: {
