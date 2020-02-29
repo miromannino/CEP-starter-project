@@ -23,7 +23,6 @@ module.exports = (props) => `<?xml version='1.0' encoding='UTF-8'?>
       <DispatchInfo>
         <Resources>
           <MainPath>./client/index.html</MainPath>
-          <ScriptPath>./host/index.jsx</ScriptPath>
           <CEFCommandLine />
         </Resources>
         <Lifecycle>

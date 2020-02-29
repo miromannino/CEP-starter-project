@@ -10,8 +10,8 @@ utils.deleteFolderRecursive('./dist');
 fs.mkdirSync('./dist');
 fs.copySync('./src/assets', './dist/assets');
 fs.mkdirSync('./dist/CSXS');
-fs.copySync('./src/host', './dist/host');
-fs.mkdirSync('./dist/client');
+fs.copySync('./src/jsx', './dist/jsx');
+fs.mkdirSync('./dist/html');
 fs.copySync('./src/client/', './dist/client');
 
 let manifestFile = fs.createWriteStream('./dist/CSXS/manifest.xml');
