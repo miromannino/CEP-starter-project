@@ -1,3 +1,3 @@
-function setSelectedLayeroOpacity(o) {
+function setSelectedLayerOpacity(o) {
     app.activeDocument.activeLayer.opacity = o;
 }

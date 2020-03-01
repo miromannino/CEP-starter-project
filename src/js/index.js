@@ -1,9 +1,13 @@
 import 'script-loader!./CSInterface.js';
-import 'script-loader!./JSX.js';
 
 import '../assets/style/index.scss';
 
-import { writeCiaoInRoot } from './utils';
+import {UI} from './ui.js';
+
+
+// ----------------------------------
+// Init
+// ----------------------------------
 
 // Restarting extension
 function restartExtension() {
@@ -15,21 +19,14 @@ function restartExtension() {
     }
 }
 
-function setSelectedLayerOpacity(o) {
-    csInterface.evalRoutine('setSelectedLayeroOpacity')
-    app.activeDocument.activeLayer.opacity = o;
-}
-
-// ----------------------------------
-// Bootstrap
-// ----------------------------------
-
-var csInterface = new CSInterface();
-jsx.evalFile('index.jsx', function jsxLoaded() {
-    console.log('jsx loaded');
-});
-
-var restartExtensionButton = document.getElementById('#restartExtensionButton');
-if (restartExtensionButton) {
+var restartExtensionButton = document.getElementById('restartExtensionBtn');
+if (restartExtensionButton) { // It might not be in the HTML in production
     restartExtensionButton.addEventListener('click', () => restartExtension());
 }
+
+var csInterface = new CSInterface();
+
+// This is executed everytime the HTML panel is loaded. There is no need to restart Photoshop
+csInterface.evalScript('$.evalFile("' + csInterface.getSystemPath(SystemPath.EXTENSION) + '/jsx/index.jsx")');
+
+var ui = new UI(csInterface);
