@@ -69,3 +69,25 @@ In order to debug your browser might not work. It is strongly suggested to use (
 
 Opening cefclient at the address `http://localhost:5042` a page will show with a link. Pressing that link Chrome's Developer Tools are opened in order to debug and read console messages.
 
+# Project description
+
+## Important folders and files
+
+The folders in this starter project are:
+
+ - `build-scripts` folder contains all the scripts needed to compile and install the CEP extension.
+ - `dist` folder is automatically created by building the project and it contains the compiled extension.
+ - `node_modules` folder is automatically created doing `yarn install` and it contains all needed libraries to build the project plus all libraries used by the CEP extension.
+ - `src` folder contains the source files of the extensionn
+ 
+   - `imgs` folder contains all images needed by the CEP extension.
+   - `js` folder contains all scripts needed by the HTML user interface.
+   - `jsx` folder contains the extended scripts, needed to communicate with Photosohp.
+   - `style` folder contains all SCSS files needed to style the user interface.
+   - `index.html` contains the starting point of the user interface.
+   
+ - `package.json` contains all the package info, including some configuration for the CEP extension.
+ - `webpack.config.js` contains webpack configuration. It produces a file `index.js` inside the folder `dist/js`, which should contains all imported resources from js files.
+
+
+
