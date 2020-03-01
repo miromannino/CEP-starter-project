@@ -1,8 +1,8 @@
 import 'script-loader!./CSInterface.js';
 
-import '../assets/style/index.scss';
+import 'style/index.scss';
 
-import {UI} from './ui.js';
+import {UI} from 'js/ui.js';
 
 
 // ----------------------------------
@@ -13,9 +13,9 @@ import {UI} from './ui.js';
 function restartExtension() {
     try {
         process.removeAllListeners();
-        window.location.href = "../client/index.html";
+        window.location.href = "../ui/index.html";
     } catch (e) {
-        window.location.href = "../client/index.html";
+        window.location.href = "../ui/index.html";
     }
 }
 

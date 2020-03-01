@@ -8,11 +8,13 @@ const debugConfigBuilder = require('./debug-config-builder');
 
 utils.deleteFolderRecursive('./dist');
 fs.mkdirSync('./dist');
-fs.copySync('./src/assets', './dist/assets');
-fs.mkdirSync('./dist/CSXS');
+fs.copySync('./src/index.html', './dist/index.html');
+fs.copySync('./src/imgs', './dist/imgs');
 fs.copySync('./src/jsx', './dist/jsx');
-fs.mkdirSync('./dist/html');
-fs.copySync('./src/client/', './dist/client');
+fs.copySync('./src/style', './dist/style');
+fs.mkdirSync('./dist/CSXS');
+fs.mkdirSync('./dist/js');
+
 
 let manifestFile = fs.createWriteStream('./dist/CSXS/manifest.xml');
 manifestFile.write(manifestBuilder(pkgConfig));

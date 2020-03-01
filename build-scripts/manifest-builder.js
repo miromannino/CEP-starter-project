@@ -22,7 +22,7 @@ module.exports = (props) => `<?xml version='1.0' encoding='UTF-8'?>
     <Extension Id="${props.extensionId}">
       <DispatchInfo>
         <Resources>
-          <MainPath>./client/index.html</MainPath>
+          <MainPath>./index.html</MainPath>
           <CEFCommandLine />
         </Resources>
         <Lifecycle>
