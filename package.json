@@ -12,7 +12,9 @@
     "build-extension": "node ./build-scripts/build.js",
     "install-extension": "node ./build-scripts/install.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
