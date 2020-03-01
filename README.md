@@ -71,9 +71,9 @@ Opening cefclient at the address `http://localhost:5042` a page will show with a
 
 # Project description
 
-## Important folders and files
+Most of the project description will be available as comments inside the code. 
 
-The folders in this starter project are:
+Important folders and files:
 
  - `build-scripts` folder contains all the scripts needed to compile and install the CEP extension.
  - `dist` folder is automatically created by building the project and it contains the compiled extension.
